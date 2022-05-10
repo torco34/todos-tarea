@@ -1,9 +1,19 @@
 import React from "react";
 import "./TodoSearch.css";
-const TodoSearch = () => {
+const TodoSearch = ({ searchValue, setSearchValue }) => {
+  const [] = React.useState("");
+  const onSenchenValue = (event) => {
+    console.log(event);
+    setSearchValue(event.target.value);
+  };
   return (
     <>
-      <input className="TodoSearch" placeholder="Cebolla" />
+      <input
+        className="TodoSearch"
+        placeholder="Cebolla"
+        value={searchValue}
+        onChange={onSenchenValue}
+      />
     </>
   );
 };
