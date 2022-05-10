@@ -1,7 +1,6 @@
 import React from "react";
 import "./TodoSearch.css";
 const TodoSearch = ({ searchValue, setSearchValue }) => {
-  const [] = React.useState("");
   const onSenchenValue = (event) => {
     console.log(event);
     setSearchValue(event.target.value);

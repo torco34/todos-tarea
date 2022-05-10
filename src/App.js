@@ -19,16 +19,33 @@ function App() {
   const [searchValue, setSearchValue] = React.useState("");
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
+  // PARA BUCAR LA TAREA
   let searchedTodo = [];
   if (!searchValue.length >= 1) {
     searchedTodo = todos;
   } else {
     searchedTodo = todos.filter((todo) => {
       const todoText = todo.text.toLowerCase();
-      const searchText = searchValue.toLowerCase();
+      const searchText = searchValue.toLwerCase();
       return todoText.includes(searchText);
     });
   }
+  // PARA MARCAR COMO LEIDO O HECHO
+  const completeTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text == text);
+    const newTodos = [...todos];
+    newTodos[todoIndex].completed = true;
+
+    setTodos(newTodos);
+  };
+
+  // PARA ELIMINAR LA TAREA HECHA
+  const deleteTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text == text);
+    const newTodos = [...todos];
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos);
+  };
   return (
     <>
       <header className="App-header App">
@@ -42,6 +59,8 @@ function App() {
               key={todo.text}
               text={todo.text}
               completed={todo.completed}
+              onComplete={() => completeTodo(todo.text)}
+              onDelete={() => deleteTodo(todo.text)}
             />
           ))}
         </TodoList>
