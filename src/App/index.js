@@ -1,37 +1,49 @@
 import React from "react";
 import "./App.css";
 import { AppUI } from "./AppUI";
-const defaulTodos = [
-  { text: "Cortar cebolla", completed: true },
-  { text: "Hacer aseo mi casa", completed: false },
-  { text: "Comer mucha proteina", completed: false },
-  { text: "Llorar con la llorona", completed: false },
-  { text: "Trabajar en la pizzeria", completed: true },
-  { text: "Hacer ejercicio", completed: false },
-];
+
 function App() {
-  const [todos, setTodos] = React.useState(defaulTodos);
+  // GUARDADO EN LOCALSTORY
+  const localStorageTodo = localStorage.getItem("TODOS_V1");
+  let persedTodos;
+
+  if (!localStorageTodo) {
+    localStorage.setItem("TODOS_V1", JSON.stringify([]));
+    persedTodos = [];
+  } else {
+    persedTodos = JSON.parse(localStorageTodo);
+  }
+  // REACIONA A TRUE LA LINEA MARCADO LEIDO
+  const [todos, setTodos] = React.useState(persedTodos);
   const [searchValue, setSearchValue] = React.useState("");
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
-  // PARA BUCAR LA TAREA
+  // PARA BUCAR LA TAREA FILTRAR
   let searchedTodo = [];
   if (!searchValue.length >= 1) {
     searchedTodo = todos;
   } else {
     searchedTodo = todos.filter((todo) => {
       const todoText = todo.text.toLowerCase();
-      const searchText = searchValue.toLwerCase();
+      const searchText = searchValue.toLowerCase();
       return todoText.includes(searchText);
     });
   }
+
+  // FUNCION PARA ELIMINAR DEFINITIVAMENTE CON LOCAL STARY
+  const seveTodos = (newTodos) => {
+    const stringifiedTodos = JSON.stringify(newTodos);
+    localStorage.setItem("TODOS_V1", stringifiedTodos);
+    setTodos(newTodos);
+  };
+
   // PARA MARCAR COMO LEIDO O HECHO
   const completeTodo = (text) => {
     const todoIndex = todos.findIndex((todo) => todo.text == text);
     const newTodos = [...todos];
     newTodos[todoIndex].completed = true;
 
-    setTodos(newTodos);
+    seveTodos(newTodos);
   };
 
   // PARA ELIMINAR LA TAREA HECHA
@@ -39,7 +51,7 @@ function App() {
     const todoIndex = todos.findIndex((todo) => todo.text == text);
     const newTodos = [...todos];
     newTodos.splice(todoIndex, 1);
-    setTodos(newTodos);
+    seveTodos(newTodos);
   };
   return (
     <AppUI
