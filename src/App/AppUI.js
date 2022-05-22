@@ -1,27 +1,19 @@
 import React from "react";
-
+import { TodosContext } from "../TodosContext";
 import { TodoCouter } from "../TodoCouter";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton";
-function AppUI({
-  error,
-  loading,
-  totalTodos,
-  completedTodos,
-  searchValue,
-  setSearchValue,
-  searchedTodo,
-  completeTodo,
-  deleteTodo,
-}) {
+function AppUI() {
+  const { error, loading, searchedTodo, completeTodo, deleteTodo } =
+    React.useContext(TodosContext);
   return (
     <>
       <header className="App-header App">
-        <TodoCouter total={totalTodos} completed={completedTodos} />
+        <TodoCouter />
 
-        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+        <TodoSearch />
 
         <TodoList>
           {error && <p>Lo sentimos :( error</p>}
@@ -37,6 +29,7 @@ function AppUI({
             />
           ))}
         </TodoList>
+
         <CreateTodoButton />
       </header>
     </>

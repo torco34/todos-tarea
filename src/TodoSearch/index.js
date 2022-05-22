@@ -1,6 +1,8 @@
 import React from "react";
 import "./TodoSearch.css";
-const TodoSearch = ({ searchValue, setSearchValue }) => {
+import { TodosContext } from "../TodosContext";
+const TodoSearch = () => {
+  const { searchValue, setSearchValue } = React.useContext(TodosContext);
   const onSenchenValue = (event) => {
     console.log(event);
     setSearchValue(event.target.value);
