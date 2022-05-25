@@ -11,7 +11,7 @@ const TodoSearch = () => {
     <>
       <input
         className="TodoSearch"
-        placeholder="Cebolla"
+        placeholder="Buscar tarea"
         value={searchValue}
         onChange={onSenchenValue}
       />
