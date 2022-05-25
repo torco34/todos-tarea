@@ -7,7 +7,7 @@ const TodoCouter = () => {
   return (
     <>
       <h1 className="TodoCounter">
-        Has completado {completedTodos} de {totalTodos} todos
+        Has completado {completedTodos} de {totalTodos} tareas
       </h1>
     </>
   );

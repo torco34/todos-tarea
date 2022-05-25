@@ -26,7 +26,7 @@ function TodoForm() {
         <textarea
           value={newTodoValue}
           onChange={onChange}
-          placeholder="Cortar ceboola"
+          placeholder="Buscar Tarea"
         />
         <div className="TodoForm-buttonContainer">
           <button
