@@ -4,10 +4,19 @@ import { TodoCouter } from "../TodoCouter";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
+import { Modal } from "../Modal";
+import { TodoForm } from "../TodoForm.js";
 import { CreateTodoButton } from "../CreateTodoButton";
 function AppUI() {
-  const { error, loading, searchedTodo, completeTodo, deleteTodo } =
-    React.useContext(TodosContext);
+  const {
+    error,
+    loading,
+    searchedTodo,
+    completeTodo,
+    deleteTodo,
+    openModal,
+    setOpenModal,
+  } = React.useContext(TodosContext);
   return (
     <>
       <header className="App-header App">
@@ -29,8 +38,12 @@ function AppUI() {
             />
           ))}
         </TodoList>
-
-        <CreateTodoButton />
+        {openModal && (
+          <Modal>
+            <TodoForm />
+          </Modal>
+        )}
+        <CreateTodoButton setOpenModal={setOpenModal} />
       </header>
     </>
   );

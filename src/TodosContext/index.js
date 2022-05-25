@@ -14,6 +14,7 @@ function TodoProvider(props) {
   // REACIONA A TRUE LA LINEA MARCADO LEIDO
 
   const [searchValue, setSearchValue] = React.useState("");
+  const [openModal, setOpenModal] = React.useState(false);
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
   // PARA BUCAR LA TAREA FILTRAR
@@ -30,13 +31,17 @@ function TodoProvider(props) {
   }
 
   // FUNCION PARA ELIMINAR DEFINITIVAMENTE CON LOCAL STARY
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({ completed: false, text });
+    seveTodos(newTodos);
+  };
 
   // PARA MARCAR COMO LEIDO O HECHO
   const completeTodo = (text) => {
     const todoIndex = todos.findIndex((todo) => todo.text == text);
     const newTodos = [...todos];
     newTodos[todoIndex].completed = true;
-
     seveTodos(newTodos);
   };
 
@@ -59,6 +64,9 @@ function TodoProvider(props) {
         searchedTodo,
         completeTodo,
         deleteTodo,
+        addTodo,
+        openModal,
+        setOpenModal,
       }}
     >
       {props.children}

@@ -1,8 +1,8 @@
 import React from "react";
 import "./CreateTodoButton.css";
-const CreateTodoButton = () => {
+const CreateTodoButton = (props) => {
   const onClickBoton = () => {
-    alert("Aqui va un portal");
+    props.setOpenModal((prevState) => !prevState);
   };
   return (
     <>
