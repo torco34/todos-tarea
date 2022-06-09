@@ -21,12 +21,12 @@ function TodoForm() {
   return (
     <>
       <form onSubmit={onSubmit}>
-        <label>Aqui tu tareas</label>
+        <label>Crear tu tarea aqui</label>
 
         <textarea
           value={newTodoValue}
           onChange={onChange}
-          placeholder="Buscar Tarea"
+          placeholder="Agregar Tareas"
         />
         <div className="TodoForm-buttonContainer">
           <button
