@@ -4,12 +4,12 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 13px;
-  position: fixed;
-  right: 350px;
+  font-size: 2rem;
+  position: relative;
+  /* right: 350px; */
   font-weight: bold;
-
-  color: dimgray;
+  top: 0rem;
+  color: rgb(9, 8, 8);
   display: flex;
   justify-content: center;
   align-items: center;
