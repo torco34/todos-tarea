@@ -1,25 +1,28 @@
 .TodoItem {
-  background-color: #eea5f6;
+  background-color: #ffff;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 400px;
   margin-top: 24px;
-  /* border: solid 2px red; */
-  box-shadow: 0px 5px 50px rgba(231, 17, 221, 0.15);
+  color: #22a39f;
+  border-radius: 20px;
+  box-shadow: 0px 5px 50px #759796;
+  font-family: "Montserrat";
+  font-weight: 400;
 }
 
 .TodoItem-p {
   margin: 24px 0 24px 24px;
   width: calc(100%);
-  font-size: 18px;
+
   line-height: 24px;
   font-weight: 400;
 }
 .TodoItem-p--complete {
   text-decoration: line-through;
-  color: #0c093c;
+  color: #497174;
 }
 
 .Icon {
@@ -27,30 +30,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 48px;
-  width: 48px;
-  font-size: 24px;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
   font-weight: bold;
-  color: #0c093c;
-  /* background-color: rgb(34, 131, 58); */
+  color: #fff;
+  margin-top: -70px;
+  border-radius: 50%;
+  background-color: #22a39f;
 }
 
 .Icon-check {
   position: absolute;
-  left: 12px;
+  left: 15px;
 }
 .Icon-check--active {
-  color: #df42d1;
+  color: #fff;
+  background-color: #497174;
 }
 .Icon-check:hover {
-  color: #df42d1;
+  color: #b2b2b2;
+  background-color: #497174;
 }
-
-.Icon-delete {
-  position: absolute;
-  top: -24px;
-  right: 0;
-}
-.Icon-delete:hover {
-  color: red;
+img {
+  width: 20px;
+  cursor: pointer;
 }

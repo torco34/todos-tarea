@@ -1,5 +1,5 @@
 .CreateTodoButton {
-  background-color: #d099dd;
+  background-color: #22a39f;
   box-shadow: 0px 5px 25px rgba(72, 82, 84, 0.5);
   border: none;
   border-radius: 50%;
@@ -9,7 +9,7 @@
   /* right: 350px; */
   font-weight: bold;
   top: 0rem;
-  color: rgb(9, 8, 8);
+  color: #f3efe0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,4 +24,5 @@
 .CreateTodoButton:hover {
   transform: 0.5s;
   background-color: #f9fbfc;
+  color: #497174;
 }

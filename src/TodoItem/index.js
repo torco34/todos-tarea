@@ -1,5 +1,6 @@
 import React from "react";
 import "./TodoItem.css";
+import icon from "../assets/img/icon.png";
 const TodoItem = (props) => {
   const onComplete = () => {
     alert("Ha completado");
@@ -21,8 +22,8 @@ const TodoItem = (props) => {
         >
           {props.text}
         </p>
-        <span className="Icon Icon-delete" onClick={props.onDelete}>
-          X
+        <span className=" Icon-delete" onClick={props.onDelete}>
+          <img src={icon} alf="img" />
         </span>
       </li>
     </>
