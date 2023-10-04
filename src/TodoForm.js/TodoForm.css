@@ -1,5 +1,5 @@
 form {
-  width: 90%;
+  width: 100%;
   max-width: 300px;
   background-color: #fff;
   padding: 33px 40px;
@@ -13,13 +13,13 @@ label {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
-  color: #497174;
+  color: #7D7C7C;
   margin-bottom: 26px;
 }
 
 textarea {
   background-color: #f9fbfc;
-  border: 2px solid #22a39f;
+  border: 2px solid #7D7C7C;
   border-radius: 2px;
   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
   color: #497174;
@@ -27,17 +27,17 @@ textarea {
   text-align: center;
   padding: 12px;
   height: 96px;
-  width: calc(100% - 25px);
+  width: 100% ;
 }
 
 textarea::placeholder {
-  color: #497174;
+  color: #CCC8AA;
   font-family: "Montserrat";
   font-weight: 400;
 }
 
 textarea:focus {
-  outline-color: #22a39f;
+  outline-color: #CCC8AA;
 }
 
 .TodoForm-buttonContainer {
@@ -62,8 +62,8 @@ textarea:focus {
 }
 
 .TodoForm-button--add {
-  background: #22a39f;
-  box-shadow: 0px 5px 25px #95f2ef;
+  background: #CCC8AA;
+  /* box-shadow: 0px 5px 25px #95f2ef; */
 }
 
 .TodoForm-button--cancel {

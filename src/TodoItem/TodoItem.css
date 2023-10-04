@@ -1,28 +1,37 @@
 .TodoItem {
-  background-color: #ffff;
+  background-color: #f1efef;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  /*width: 500px;
+  */
   margin-top: 24px;
-  color: #22a39f;
-  border-radius: 20px;
-  box-shadow: 0px 5px 50px #759796;
+  color: #191717;
+  border-radius: 10px;
+  /*box-shadow: 0px 5px 50px #759796;
+  */
   font-family: "Montserrat";
   font-weight: 400;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .TodoItem-p {
   margin: 24px 0 24px 24px;
   width: calc(100%);
-
   line-height: 24px;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
 .TodoItem-p--complete {
   text-decoration: line-through;
-  color: #497174;
+  color: #0c0c0c;
 }
 
 .Icon {
@@ -30,14 +39,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   font-size: 20px;
   font-weight: bold;
-  color: #fff;
-  margin-top: -70px;
+  color: #191717;
+  /* margin-top: -70px; */
   border-radius: 50%;
-  background-color: #22a39f;
+  background-color: #CCC8AA;
 }
 
 .Icon-check {
@@ -46,13 +55,16 @@
 }
 .Icon-check--active {
   color: #fff;
-  background-color: #497174;
+  background-color: #7D7C7C;
 }
 .Icon-check:hover {
   color: #b2b2b2;
-  background-color: #497174;
+  background-color: #7D7C7C;
 }
-img {
-  width: 20px;
+span{
+  /* width: 30px; */
+  padding:20px ;
   cursor: pointer;
+  position: relative;
+  right: 20px;
 }

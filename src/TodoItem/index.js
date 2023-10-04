@@ -17,13 +17,14 @@ const TodoItem = (props) => {
         >
           √
         </span>
-        <p
+        <div
           className={`TodoItem-p  ${props.completed && "TodoItem-p--complete"}`}
         >
-          {props.text}
-        </p>
-        <span className=" Icon-delete" onClick={props.onDelete}>
-          <img src={icon} alf="img" />
+           {props.text}
+        </div>
+        <span className=" btn btn-dark Icon-delete" onClick={props.onDelete}>
+        
+          Eliminar
         </span>
       </li>
     </>

@@ -4,3 +4,9 @@
   margin: 0;
   padding: 48px;
 }
+.TodoCounter span{
+  background-color: #CCC8AA;
+  padding: 10px;
+  border-radius: 5px;
+ 
+}

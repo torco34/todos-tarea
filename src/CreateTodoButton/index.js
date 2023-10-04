@@ -6,8 +6,8 @@ const CreateTodoButton = (props) => {
   };
   return (
     <>
-      <button className="CreateTodoButton" onClick={onClickBoton}>
-        <p>+</p>
+      <button className="CreateTodoButton  btn btn" onClick={onClickBoton}>
+        Crear
       </button>
     </>
   );

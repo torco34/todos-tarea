@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 body {
   margin: 0px;
@@ -16,13 +16,14 @@ body {
 }
 
 .App-header {
-  background-color: #eff5f5;
+  background-color: #f1efef;
+
   color: #497174;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   /* color: white; */
 }

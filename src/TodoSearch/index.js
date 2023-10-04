@@ -9,12 +9,15 @@ const TodoSearch = () => {
   };
   return (
     <>
-      <input
-        className="TodoSearch"
+     <div className="input">
+     <input
+        className="TodoSearch  "
         placeholder="Buscar tarea"
         value={searchValue}
         onChange={onSenchenValue}
       />
+      <i class="bi bi-search"></i>
+     </div>
     </>
   );
 };

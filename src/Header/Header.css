@@ -1,0 +1,8 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    background-color: #191717;
+    color: aliceblue;
+}

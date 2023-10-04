@@ -7,6 +7,11 @@ import { TodoItem } from "../TodoItem";
 import { Modal } from "../Modal";
 import { TodoForm } from "../TodoForm.js";
 import { CreateTodoButton } from "../CreateTodoButton";
+import { Header } from "../Header";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
 function AppUI() {
   const {
     error,
@@ -19,34 +24,48 @@ function AppUI() {
   } = React.useContext(TodosContext);
   return (
     <>
-      <header className="App-header App">
-        <TodoCouter />
+      <Header />
+      <br></br>
+      <Container className="">
+        <Row>
+          <Col lg={9}>
+            <TodoSearch />
+          </Col>
+          <Col lg={0}>
+            <CreateTodoButton setOpenModal={setOpenModal} />
+          </Col>
+        </Row>
 
-        <TodoSearch />
-
-        <TodoList>
-          {error && <p>Lo sentimos :( error</p>}
-          {loading && <p>Cargando......</p>}
-          {!loading && !searchedTodo.length && (
-            <p> !No tienes tareas Creadas!</p>
-          )}
-          {searchedTodo.map((todo) => (
-            <TodoItem
-              key={todo.text}
-              text={todo.text}
-              completed={todo.completed}
-              onComplete={() => completeTodo(todo.text)}
-              onDelete={() => deleteTodo(todo.text)}
-            />
-          ))}
-        </TodoList>
+        <Row>
+          <Col lg={9}>
+            <TodoList>
+              {error && <p>Lo sentimos :( error</p>}
+              {loading && <p>Cargando......</p>}
+              {!loading && !searchedTodo.length && (
+                <p className="text-center p-3"> !No tienes tareas Creadas!</p>
+              )}
+              {searchedTodo.map((todo) => (
+                <TodoItem
+                  key={todo.text}
+                  text={todo.text}
+                  completed={todo.completed}
+                  onComplete={() => completeTodo(todo.text)}
+                  onDelete={() => deleteTodo(todo.text)}
+                />
+              ))}
+            </TodoList>
+          </Col>
+          <Col lg={3}>
+            <TodoCouter />
+          </Col>
+        </Row>
         {openModal && (
           <Modal>
             <TodoForm />
           </Modal>
         )}
-        <CreateTodoButton setOpenModal={setOpenModal} />
-      </header>
+        {/* <CreateTodoButton setOpenModal={setOpenModal} /> */}
+      </Container>
     </>
   );
 }
