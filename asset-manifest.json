@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/todos-tarea/static/css/main.6c7f8219.css",
-    "main.js": "/todos-tarea/static/js/main.83b9010a.js",
+    "main.css": "/todos-tarea/static/css/main.2141cba7.css",
+    "main.js": "/todos-tarea/static/js/main.372bac5a.js",
     "index.html": "/todos-tarea/index.html",
-    "main.6c7f8219.css.map": "/todos-tarea/static/css/main.6c7f8219.css.map",
-    "main.83b9010a.js.map": "/todos-tarea/static/js/main.83b9010a.js.map"
+    "main.2141cba7.css.map": "/todos-tarea/static/css/main.2141cba7.css.map",
+    "main.372bac5a.js.map": "/todos-tarea/static/js/main.372bac5a.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c7f8219.css",
-    "static/js/main.83b9010a.js"
+    "static/css/main.2141cba7.css",
+    "static/js/main.372bac5a.js"
   ]
 }
