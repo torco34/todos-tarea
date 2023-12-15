@@ -1,16 +1,13 @@
 .TodoItem {
-  background-color: #f1efef;
+  background-color: #eeeeee;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  /*width: 500px;
-  */
+  border: solid 1px #b5b7bb;
   margin-top: 24px;
   color: #191717;
   border-radius: 10px;
-  /*box-shadow: 0px 5px 50px #759796;
-  */
   font-family: "Montserrat";
   font-weight: 400;
   -webkit-border-radius: 10px;
@@ -31,7 +28,7 @@
 }
 .TodoItem-p--complete {
   text-decoration: line-through;
-  color: #0c0c0c;
+  color: #D9ADAD;
 }
 
 .Icon {
@@ -39,14 +36,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   font-size: 20px;
   font-weight: bold;
-  color: #191717;
+  color: #fff;
   /* margin-top: -70px; */
   border-radius: 50%;
-  background-color: #CCC8AA;
+  background-color: #7d7c7c;
 }
 
 .Icon-check {
@@ -55,16 +52,20 @@
 }
 .Icon-check--active {
   color: #fff;
-  background-color: #7D7C7C;
+  background-color: #e49393;
 }
 .Icon-check:hover {
-  color: #b2b2b2;
-  background-color: #7D7C7C;
+  color: #fff;
+  background-color: #e49393;
 }
-span{
+span {
   /* width: 30px; */
-  padding:20px ;
+  padding: 20px;
   cursor: pointer;
   position: relative;
   right: 20px;
+}
+.button{
+  display: flex;
+  gap: 20px;
 }

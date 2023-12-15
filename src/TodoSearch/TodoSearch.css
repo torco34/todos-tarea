@@ -1,6 +1,6 @@
 .TodoSearch {
-  background: #ccc8aa;
-  border: 2px solid #ccc8aa;
+  background: #EEEEEE;
+  border: 2px solid #A6A6A4;
   height: 45px;
   width: 100%;
   font-size: 24px;
@@ -8,17 +8,17 @@
   font-family: "Montserrat";
   font-weight: 400;
   color: #191717;
-  border-radius: 10px;
+  border-radius:20px;
   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  -ms-border-radius:20px;
+  -o-border-radius:20px;
 }
 .input i {
- position: relative;
- top: -35px;
-left: 15px;
+  position: relative;
+  top: -35px;
+  left: 15px;
 }
 .TodoSearch::placeholder {
   color: #191717;
@@ -27,5 +27,5 @@ left: 15px;
 }
 
 .TodoSearch:focus {
-  outline-color: #ccc8aa;
+  outline-color: #A6A6A4;
 }

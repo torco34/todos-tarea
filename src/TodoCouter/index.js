@@ -8,10 +8,12 @@ const TodoCouter = () => {
 
   return (
     <>
+    <br></br>
+    <br></br>
       <div className="TodoCounter">
         <div>
           {" "}
-          Tareas: <span> {totalTodos}</span>
+          Tarea: <span> {totalTodos}</span>
         </div>{" "}
         <br></br>
         <div>

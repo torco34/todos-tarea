@@ -15,6 +15,10 @@ function TodoProvider(props) {
 
   const [searchValue, setSearchValue] = React.useState("");
   const [openModal, setOpenModal] = React.useState(false);
+  const [texto, setTexto] = React.useState();
+  const [newTodoValue, setNewTodoValue] = React.useState([]);
+
+  const [todo, setTodo] = React.useState([]);
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
   // PARA BUCAR LA TAREA FILTRAR
@@ -33,8 +37,10 @@ function TodoProvider(props) {
   // FUNCION PARA ELIMINAR DEFINITIVAMENTE CON LOCAL STARY
   const addTodo = (text) => {
     const newTodos = [...todos];
+    setTodo([...todos, { text }]);
     newTodos.push({ completed: false, text });
     seveTodos(newTodos);
+    console.log(newTodos, "newTosdo");
   };
 
   // PARA MARCAR COMO LEIDO O HECHO
@@ -52,6 +58,7 @@ function TodoProvider(props) {
     newTodos.splice(todoIndex, 1);
     seveTodos(newTodos);
   };
+
   return (
     <TodosContext.Provider
       value={{
@@ -67,6 +74,9 @@ function TodoProvider(props) {
         addTodo,
         openModal,
         setOpenModal,
+       
+        setNewTodoValue,
+        newTodoValue,
       }}
     >
       {props.children}

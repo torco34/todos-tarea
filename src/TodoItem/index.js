@@ -2,10 +2,6 @@ import React from "react";
 import "./TodoItem.css";
 import icon from "../assets/img/icon.png";
 const TodoItem = (props) => {
-  const onComplete = () => {
-    alert("Ha completado");
-  };
-
   return (
     <>
       <li className="TodoItem">
@@ -20,12 +16,17 @@ const TodoItem = (props) => {
         <div
           className={`TodoItem-p  ${props.completed && "TodoItem-p--complete"}`}
         >
-           {props.text}
+          {props.text}
         </div>
-        <span className=" btn btn-dark Icon-delete" onClick={props.onDelete}>
-        
-          Eliminar
-        </span>
+
+        <div className="button">
+          <span
+            className=" btn btn-danger Icon-delete"
+            onClick={props.onDelete}
+          >
+            <i class="bi bi-trash"></i>
+          </span>
+        </div>
       </li>
     </>
   );

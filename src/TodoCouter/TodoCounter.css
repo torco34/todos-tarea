@@ -1,12 +1,17 @@
 .TodoCounter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+ 
+  height: 100px;
   font-size: 24px;
   text-align: center;
   margin: 0;
-  padding: 48px;
+  padding: 20px;
 }
-.TodoCounter span{
-  background-color: #CCC8AA;
-  padding: 10px;
+.TodoCounter span {
+  margin-left: 20px;
+  color: #ff4b5c;
   border-radius: 5px;
- 
 }

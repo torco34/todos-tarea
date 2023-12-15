@@ -4,15 +4,15 @@ import { TodosContext } from "../TodosContext";
 const TodoSearch = () => {
   const { searchValue, setSearchValue } = React.useContext(TodosContext);
   const onSenchenValue = (event) => {
-    console.log(event);
+  
     setSearchValue(event.target.value);
   };
   return (
     <>
      <div className="input">
      <input
-        className="TodoSearch  "
-        placeholder="Buscar tarea"
+        className="TodoSearch"
+        placeholder="Buscar tareas"
         value={searchValue}
         onChange={onSenchenValue}
       />
